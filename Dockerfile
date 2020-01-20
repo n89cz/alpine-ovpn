@@ -4,7 +4,7 @@ RUN apk add --update \
     bash \
     openvpn openvpn-auth-pam \
     iptables \
-    mc
+    mc \
     && rm -rf /var/cache/apk/*
 
 #COPY CONFIG
@@ -16,4 +16,4 @@ EXPOSE 1194/udp 1194/tcp
 
 #ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["/bin/sh"]
+CMD ["/bin/bash"]
